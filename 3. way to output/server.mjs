@@ -13,6 +13,19 @@ app.get('/profile', (req, res) => {
     res.send('this is profile' + new Date());
 })
 
+app.post('/weather', (req, res, next) => {
+
+    console.log('req.body', req.body)
+   // res.send('weather is normal') // not recommended 
+
+   res.send({
+    meaasge: 'weather is normal',
+    temp : 32,
+    min : 20,
+   })
+})
+
+
 
 app.get('/getHtmlFile', (req, res) => {
  

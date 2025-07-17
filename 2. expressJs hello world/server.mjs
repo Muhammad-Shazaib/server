@@ -25,7 +25,7 @@ app.get('/weather/:cityName', (req, res) => {
     console.log("req.query.side: ", req.query.side)
     console.log("req.query.age: ", req.query.age)
 
-    console.log("req.body.name: ", req.body.name)
+console.log(req.query.user?.name || "No user name provided");  //    console.log("req.body.name: ", req.body.name)
     console.log("req.body.class: ", req.body.class)
     console.log("req.body.rollNumber: ", req.body.rollNumber)
 

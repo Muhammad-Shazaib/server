@@ -16,9 +16,11 @@ app.get('/profile', (req, res) => {
 
 app.get('/getHtmlFile', (req, res) => {
  
-    res.sendFile('./public/index.html')
+      res.sendFile(path.join(__dirname, 'public', 'shazaib.jpg'));
 
 })
+
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.use(express.static(path.join(__dirname, 'public')))
 

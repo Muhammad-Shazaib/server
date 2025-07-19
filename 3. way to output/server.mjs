@@ -8,9 +8,11 @@ app.use(express.json()); // body parser
 // app.use(cors())
 
 
-app.get('/profile', (req, res) => {
+app.get('/profile', (req, res, next) => {
     console.log('this is profile!', new Date());
     res.send('this is profile' + new Date());
+}, (req, res, next)=>{
+    
 })
 
 app.post('/weather', (req, res, next) => {

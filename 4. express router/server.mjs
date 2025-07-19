@@ -18,31 +18,81 @@ app.post('/signup', (req, res, next) => {
     res.send('this is signup' + new Date());
 })
 
-app.use((req, res, next)=>{
-if(token === 'valid'){
-    next();
+app.use((req, res, next) => {
+    if (token === 'valid') {
+        next();
 
-}else{
-    res.send({message: 'invalid token'})
-}
+    } else {
+        res.send({ message: 'invalid token' })
+    }
 
 })
 
 //  GET    /api/v1/post/:userId/:PostId
 app.get('/api/v1/post/:userId/:PostId', (req, res, next) => {
     console.log('this is a signup', new Date());
-    res.send('post created' );
+    res.send('post created');
 })
-
-app.get('/api/v1/post/:userId/:PostId', (req, res, next) => {
+//  GET    /api/v1/posts/:userId/:PostId
+app.get('/api/v1/posts/:userId/:PostId', (req, res, next) => {
     console.log('this is a signup', new Date());
-    res.send('post created' );
+    res.send('post created');
 })
-
+//  POST    /api/v1/post
 app.post('/api/v1/post', (req, res, next) => {
     console.log('this is a signup', new Date());
-    res.send('post created' );
+    res.send('post created');
 })
+
+//  PUT    /api/v1/post/:userId/:PostId
+app.put('//api/v1/post/:userId/:PostId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+//  DELETE    /api/v1/post/:userId/:PostId
+app.delete('//api/v1/post/:userId/:PostId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+//  GET    /api/v1/comment/:PostId/:commentId
+app.get('/api/v1/comment/:PostId/:commentId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+//  GET    /api/v1/comment/:PostId/:commentId
+app.get('/api/v1/comments/:PostId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+//  PUT    /api/v1/comment/:PostId/:commentId
+app.put('/api/v1/comment/:PostId/:commentId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+//  DELETE    /api/v1/comment/:PostId/:commentId
+app.delete('/api/v1/comment/:PostId/:commentId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+//  GET    /feed/:usedId
+app.delete('/api/v1/comment/:PostId/:commentId', (req, res, next) => {
+    console.log('this is a signup', new Date());
+    res.send('post created');
+})
+
+
+
+
+
+
+
+
 
 
 
